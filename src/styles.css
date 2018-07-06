@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+.form-title {
+    margin: 0;
+    padding: 28px;
+    background: #89abff;
+    color: white;
+    text-align: center;
+}
+
+.form-button {
+    padding: 10px;
+    text-align: center;
+    border-top: 2px solid #95a7ff;
+    margin-top: 30px;
+}
+
+.form-button > button {
+    width: 130px;
+    height: 38px;
+    color: #6b6b6b;
+    font-size: 16px;
+}
+
+.form-group {
+    padding: 0px 15px;
+}
+
+.form-group > input {
+    border-radius: 0;
+    height: 35px;
+}
+.footer-text {
+    text-align: center;
+    color: #888484;
+    font-size: 14px;
+}
+
+.footer-text-color {
+    color: #a2ade4;
+}
+
+.center_container {
+    padding-top: 100px;
+}

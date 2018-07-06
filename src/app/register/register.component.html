@@ -1,0 +1,47 @@
+<div class="container center_container">
+  <div class="row">
+    <div class="hidden-xs hidden-sm col-md-4 col-lg-4"></div>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+      <div class="thumbnail">
+        <h3 class="form-title">Registration</h3>
+        <div class="caption">
+          <form [formGroup]="registrationForm" (ngSubmit)="register()" class="form-horizontal">
+            <div class="form-group">
+              <label for="firstName">First Name:</label>
+              <input type="text" formControlName="firstName" class="form-control" id="firstName">
+              <small class="text-danger" *ngIf="!registrationForm.controls['firstName'].valid && registrationForm.controls['firstName'].touched">Please Enter First Name</small>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name:</label>
+              <input type="text" formControlName="lastName" class="form-control" id="lastName">
+              <small class="text-danger" *ngIf="!registrationForm.controls['lastName'].valid && registrationForm.controls['lastName'].touched">Please Enter Last Name</small>
+            </div>
+            <div class="form-group">
+              <label for="email">Email address:</label>
+              <input type="email" formControlName="email" class="form-control" id="email">
+              <small class="text-danger" *ngIf="!registrationForm.controls['email'].valid && registrationForm.controls['email'].touched">Please Enter Email Address</small>
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" formControlName="password" class="form-control" id="pwd">
+              <small class="text-danger" *ngIf="!registrationForm.controls['password'].valid && registrationForm.controls['password'].touched">Please Enter Password</small>
+            </div>
+            <!-- <div class="form-group checkbox">
+              <label>
+                <input type="checkbox"> Remember me</label>
+            </div> -->
+            <div class="form-button">
+              <button type="submit" [disabled]="!registrationForm.valid" class="btn btn-default">Register</button>
+            </div>
+            <div class="footer-text">
+                Already have an account? <span class="footer-text-color" routerLink="/login">Login</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="hidden-xs hidden-sm col-md-4 col-lg-4"></div>
+  </div>
+  <!--/row-->
+</div>
+<!--/container -->
